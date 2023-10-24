@@ -18,9 +18,9 @@ public class Utama {
         if (user.equalsIgnoreCase(u.getUser() ) && pass.equalsIgnoreCase(u.getPass())){
             do{
                 System.out.println("-----MENU TIKET-----");
-                System.out.print("1. Input Data Transaksi");
-                System.out.print("2. lihat Data Tiket");
-                System.out.print("3. Keluar");
+                System.out.println("1. Input Data Transaksi");
+                System.out.println("2. lihat Data Tiket");
+                System.out.println("3. Keluar");
                 System.out.println("");
 
                 System.out.print("Masukkan pilihan (1-3) : ");
@@ -29,28 +29,28 @@ public class Utama {
 
                 switch (pilih){
                     case 1 :
-                        System.out.println("Nama Hotel : ");
+                        System.out.print("Nama Hotel : ");
                         hotel = br.readLine();
-                        System.out.println("Jumlah Kamar : ");
+                        System.out.print("Jumlah Kamar : ");
                         jumKam = Integer.parseInt(br.readLine());
-                        System.out.println("Harga Per Kamar : ");
+                        System.out.print("Harga Per Kamar : ");
                         harPerKam = Integer.parseInt(br.readLine());
-                        System.out.println("Nama Pesawat : ");
+                        System.out.print("Nama Pesawat : ");
                         namPes = br.readLine();
-                        System.out.println("Jumlah Penumpang : ");
+                        System.out.print("Jumlah Penumpang : ");
                         jumPen = Integer.parseInt(br.readLine());
-                        System.out.println("Harga Tiket Pesawat : ");
+                        System.out.print("Harga Tiket Pesawat : ");
                         harTikPes = Integer.parseInt(br.readLine());
-                        System.out.println("Tujuan : ");
+                        System.out.print("Tujuan : ");
                         tuj = br.readLine();
                     break;
 
                     case 2 :
-                        System.out.print("Tujuan : " + tuj);
-                        System.out.print("Nama Hotel : " + hotel + "Jumlah Kamar : " + jumKam + "Harga Per Kamar :" + harPerKam);
-                        System.out.print("Total Biaya Kamar Hotel dengan diskon 45% : " + (harPerKam - ((45/100) * harPerKam)) * jumKam);
-                        System.out.print("Nama Pesawat : " + namPes + "Jumlah Penumpang : " + jumPen + "Harga tiket Pesawat : " + harTikPes);
-                        System.out.print("Total Harga Tiket Pesawat : " +  ((harTikPes * jumPen) + (jumPen * 29000)));
+                        System.out.println("Tujuan : " + tuj);
+                        System.out.println("Nama Hotel : " + hotel + "Jumlah Kamar : " + jumKam + "Harga Per Kamar :" + harPerKam);
+                        System.out.println("Total Biaya Kamar Hotel dengan diskon 45% : " + ((harPerKam - ((45/100) * harPerKam))) * jumKam);
+                        System.out.println("Nama Pesawat : " + namPes + "Jumlah Penumpang : " + jumPen + "Harga tiket Pesawat : " + harTikPes);
+                        System.out.println("Total Harga Tiket Pesawat : " +  ((harTikPes * jumPen) + (jumPen * 29000)) + "dengan biaya asuransi 29.000/penumpang");
                     break;
 
                     case 3 :
